@@ -13,6 +13,9 @@
 		63B126C022D39F5F00B5F6F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B126BF22D39F5F00B5F6F5 /* Assets.xcassets */; };
 		63B126C322D39F5F00B5F6F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63B126C122D39F5F00B5F6F5 /* LaunchScreen.storyboard */; };
 		63B126C622D39F5F00B5F6F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B126C522D39F5F00B5F6F5 /* main.m */; };
+		63B9369B22D3BDEA008CD5BE /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B126DF22D3B4F300B5F6F5 /* CoreBluetooth.framework */; };
+		63B9371D22D3CA13008CD5BE /* libNZSIMCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B9371722D3CA13008CD5BE /* libNZSIMCore.a */; };
+		63B9371E22D3CA13008CD5BE /* libNZIKey.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B9371B22D3CA13008CD5BE /* libNZIKey.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,17 @@
 		63B126C222D39F5F00B5F6F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63B126C422D39F5F00B5F6F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63B126C522D39F5F00B5F6F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		63B126DF22D3B4F300B5F6F5 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		63B9369D22D3BDFA008CD5BE /* PublicConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicConfig.h; sourceTree = "<group>"; };
+		63B9369E22D3BDFA008CD5BE /* libNZIKey.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNZIKey.a; sourceTree = "<group>"; };
+		63B9369F22D3BDFA008CD5BE /* NZIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NZIKey.h; sourceTree = "<group>"; };
+		63B936A122D3BDFA008CD5BE /* libNZSIMCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNZSIMCore.a; sourceTree = "<group>"; };
+		63B936A222D3BDFA008CD5BE /* NZSIMSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NZSIMSDK.h; sourceTree = "<group>"; };
+		63B9371722D3CA13008CD5BE /* libNZSIMCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNZSIMCore.a; sourceTree = "<group>"; };
+		63B9371822D3CA13008CD5BE /* NZSIMSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZSIMSDK.h; sourceTree = "<group>"; };
+		63B9371A22D3CA13008CD5BE /* PublicConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicConfig.h; sourceTree = "<group>"; };
+		63B9371B22D3CA13008CD5BE /* libNZIKey.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNZIKey.a; sourceTree = "<group>"; };
+		63B9371C22D3CA13008CD5BE /* NZIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZIKey.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +47,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63B9371E22D3CA13008CD5BE /* libNZIKey.a in Frameworks */,
+				63B9371D22D3CA13008CD5BE /* libNZSIMCore.a in Frameworks */,
+				63B9369B22D3BDEA008CD5BE /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +61,7 @@
 			children = (
 				63B126B522D39F5D00B5F6F5 /* MyDemo */,
 				63B126B422D39F5D00B5F6F5 /* Products */,
+				63B126DE22D3B4F200B5F6F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +76,7 @@
 		63B126B522D39F5D00B5F6F5 /* MyDemo */ = {
 			isa = PBXGroup;
 			children = (
+				63B9371522D3CA13008CD5BE /* lib */,
 				63B126B622D39F5D00B5F6F5 /* AppDelegate.h */,
 				63B126B722D39F5D00B5F6F5 /* AppDelegate.m */,
 				63B126B922D39F5D00B5F6F5 /* ViewController.h */,
@@ -69,6 +88,65 @@
 				63B126C522D39F5F00B5F6F5 /* main.m */,
 			);
 			path = MyDemo;
+			sourceTree = "<group>";
+		};
+		63B126DE22D3B4F200B5F6F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63B9369C22D3BDFA008CD5BE /* NZIKeySDK */,
+				63B936A022D3BDFA008CD5BE /* NZSIMSDK */,
+				63B126DF22D3B4F300B5F6F5 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63B9369C22D3BDFA008CD5BE /* NZIKeySDK */ = {
+			isa = PBXGroup;
+			children = (
+				63B9369D22D3BDFA008CD5BE /* PublicConfig.h */,
+				63B9369E22D3BDFA008CD5BE /* libNZIKey.a */,
+				63B9369F22D3BDFA008CD5BE /* NZIKey.h */,
+			);
+			name = NZIKeySDK;
+			path = MyDemo/lib/NZIKeySDK;
+			sourceTree = "<group>";
+		};
+		63B936A022D3BDFA008CD5BE /* NZSIMSDK */ = {
+			isa = PBXGroup;
+			children = (
+				63B936A122D3BDFA008CD5BE /* libNZSIMCore.a */,
+				63B936A222D3BDFA008CD5BE /* NZSIMSDK.h */,
+			);
+			name = NZSIMSDK;
+			path = MyDemo/lib/NZSIMSDK;
+			sourceTree = "<group>";
+		};
+		63B9371522D3CA13008CD5BE /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				63B9371622D3CA13008CD5BE /* NZSIMSDK */,
+				63B9371922D3CA13008CD5BE /* NZIKeySDK */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		63B9371622D3CA13008CD5BE /* NZSIMSDK */ = {
+			isa = PBXGroup;
+			children = (
+				63B9371722D3CA13008CD5BE /* libNZSIMCore.a */,
+				63B9371822D3CA13008CD5BE /* NZSIMSDK.h */,
+			);
+			path = NZSIMSDK;
+			sourceTree = "<group>";
+		};
+		63B9371922D3CA13008CD5BE /* NZIKeySDK */ = {
+			isa = PBXGroup;
+			children = (
+				63B9371A22D3CA13008CD5BE /* PublicConfig.h */,
+				63B9371B22D3CA13008CD5BE /* libNZIKey.a */,
+				63B9371C22D3CA13008CD5BE /* NZIKey.h */,
+			);
+			path = NZIKeySDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,10 +365,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DFA49BS56C;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MyDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MyDemo/lib/NZIKeySDK",
+					"$(PROJECT_DIR)/MyDemo/lib/NZSIMSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.hzf.APP.MyDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -304,10 +389,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DFA49BS56C;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MyDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MyDemo/lib/NZIKeySDK",
+					"$(PROJECT_DIR)/MyDemo/lib/NZSIMSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.hzf.APP.MyDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
